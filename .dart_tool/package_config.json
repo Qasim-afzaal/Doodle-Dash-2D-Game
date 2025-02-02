@@ -44,6 +44,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flame",
+      "rootUri": "file:///Users/qasim/.pub-cache/hosted/pub.dev/flame-1.23.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
       "name": "flutter",
       "rootUri": "file:///Users/qasim/development/flutter/packages/flutter",
       "packageUri": "lib/",
@@ -102,6 +108,12 @@
       "rootUri": "file:///Users/qasim/.pub-cache/hosted/pub.dev/meta-1.15.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
+    },
+    {
+      "name": "ordered_set",
+      "rootUri": "file:///Users/qasim/.pub-cache/hosted/pub.dev/ordered_set-6.1.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "path",
@@ -170,7 +182,7 @@
       "languageVersion": "3.6"
     }
   ],
-  "generated": "2025-02-02T22:16:14.099871Z",
+  "generated": "2025-02-02T22:28:51.387027Z",
   "generator": "pub",
   "generatorVersion": "3.6.0",
   "flutterRoot": "file:///Users/qasim/development/flutter",
