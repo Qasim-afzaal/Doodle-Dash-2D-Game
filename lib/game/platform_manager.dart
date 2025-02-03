@@ -8,22 +8,15 @@ import 'sprites/platform.dart';
 class PlatformManager extends Component with HasGameRef<DoodleDash> {
   final Random random = Random();
   final List<Platform> platforms = [];
-  // TODO (sprint 2): This will be dependent on player jump speed and screen width
   final double maxVerticalDistanceToNextPlatform;
-
-  // TODO (sprint 2): Adjust this value to change game difficulty
   final double minVerticalDistanceToNextPlatform = 200;
 
   PlatformManager({required this.maxVerticalDistanceToNextPlatform}) : super();
 
   @override
   void onMount() {
-    // The first platform will always be in the bottom third of the initial screen
     var currentY =
         gameRef.size.y - (random.nextInt(gameRef.size.y.floor()) / 3);
-
-    // Generate 10 Platforms at random x, y positions and add to list of platforms
-    // to be populated in the game.
     for (var i = 0; i < 9; i++) {
       if (i != 0) {
         currentY = _generateNextY();
@@ -45,10 +38,6 @@ class PlatformManager extends Component with HasGameRef<DoodleDash> {
     super.onMount();
   }
 
-  // This method determines where the next platform should be placed
-  // It calculates a random distance between the minVerticalDistanceToNextPlatform
-  // and the maxVerticalDistanceToNextPlatform, and returns a Y coordiate that is
-  // that distance above the current highest platform
   double _generateNextY() {
     final currentHighestPlatformY = platforms.last.center.y;
     final distanceToNextY = minVerticalDistanceToNextPlatform.toInt() +
